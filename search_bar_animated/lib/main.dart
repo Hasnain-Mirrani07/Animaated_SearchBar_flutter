@@ -31,7 +31,7 @@ class _AppState extends State<App> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 60),
-          child: AnimSearchBar(
+          child: AnimatedSearchBar(
             width: 400,
             textController: textController,
             onSuffixTap: () {
