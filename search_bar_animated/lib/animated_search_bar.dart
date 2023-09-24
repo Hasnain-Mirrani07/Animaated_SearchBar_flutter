@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AnimSearchBar extends StatefulWidget {
+class AnimatedSearchBar extends StatefulWidget {
   ///  width - double ,isRequired : Yes
   ///  textController - TextEditingController  ,isRequired : Yes
   ///  onSuffixTap - Function, isRequired : Yes
@@ -43,7 +43,7 @@ class AnimSearchBar extends StatefulWidget {
   final Function(String) onSubmitted;
   final TextInputAction textInputAction;
   final Function(int) searchBarOpen;
-  const AnimSearchBar({
+  const AnimatedSearchBar({
     Key? key,
 
     /// The width cannot be null
@@ -99,7 +99,7 @@ class AnimSearchBar extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AnimSearchBarState createState() => _AnimSearchBarState();
+  _AnimatedSearchBarState createState() => _AnimatedSearchBarState();
 }
 
 ///toggle - 0 => false or closed
@@ -109,7 +109,7 @@ int toggle = 0;
 /// * use this variable to check current text from OnChange
 String textFieldValue = '';
 
-class _AnimSearchBarState extends State<AnimSearchBar>
+class _AnimatedSearchBarState extends State<AnimatedSearchBar>
     with SingleTickerProviderStateMixin {
   ///initializing the AnimationController
   late AnimationController _con;
